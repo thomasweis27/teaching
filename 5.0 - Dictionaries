@@ -1,0 +1,23 @@
+highScore = {"Thomas" : 200, "Bethany":300}
+print(highScore["Bethany"])
+highScore["Sean"] = "- infinity"
+print(highScore)
+
+
+ikeaProduct = {"shark" : 10, "dinosaur" : 8, "small bear" : -3}
+print(ikeaProduct["small bear"])
+
+#_______________________________________________________________
+
+groceryList = {"bannana":7, "apple":12, "pineaple":2, "strawberry":20} 
+item = input("What item?: ")
+if item in groceryList:
+  amount = int(input("How many?: "))
+  groceryList[item] = groceryList[item]-amount
+  print(groceryList)
+else:
+  groceryList[item] = 5
+  print(groceryList)
+for item in groceryList:
+  if groceryList[item] < 5:
+    print("We need more", item)
