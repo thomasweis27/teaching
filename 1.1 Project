@@ -1,0 +1,22 @@
+#This was created during a lesson in colaboration with a student.
+#The focus was if/else statements, inputs, and printing. 
+
+print("You are in an abandoned school")
+print("Try to find your way out")
+hallway = input("Hallway 1 or 2?")
+if hallway == "2":
+  print("Your found a door to the math class")
+  line = input("Walk inside or keep walking")
+  if line == "Walk inside":
+    print("Desks fell on you, try again" )
+  else:
+    print("You started to walk again util you find a dead end and there is the door to the English room")
+    print("You walked inside and find a monster")
+    Monster = input("fight monster or run?")
+    if Monster == "Fight":
+      print("It ate you, try again")
+    else:
+      print("You run further into the room and find a another door and some desks")
+      Hide = input("Hide under the desks or run out through the other door")
+else:
+  print("You found the door to the lunch room")
