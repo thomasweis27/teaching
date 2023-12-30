@@ -1,0 +1,16 @@
+def ATM(money, withdraw):
+  while withdraw >= money:
+    print("You get a", money)
+    withdraw = withdraw - money
+  return withdraw
+#________________________________________________________________
+
+amount = int(input("How much money do you wanna withdraw?"))
+
+#bridge to top part
+amount = ATM(100, amount)
+amount = ATM(50, amount)
+amount = ATM(20, amount)
+amount = ATM(10, amount)
+amount = ATM(5, amount)
+amount = ATM(1, amount)
