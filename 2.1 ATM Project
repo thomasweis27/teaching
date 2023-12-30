@@ -1,0 +1,26 @@
+#shows the user how to start thinking in coding limitations
+#good for coding a machine in real life
+#will take this when learning functions and make a give_bill function
+
+answer = int(input("How much money do you want to withdraw? "))
+
+while answer >= 100:
+  print("Here's a $100 bill")
+  answer = answer - 100
+
+#make this code work for $50
+while answer >= 50:
+  print("Here's a $50 bill")
+  answer = answer - 50
+
+while answer >= 20:
+  print("Here's a $20 bill")
+  answer = answer - 20
+
+while answer >= 5:
+  print("Here's a $5 bill")
+  answer = answer - 5
+
+while answer >= 1:
+  print("Here's a $1 bill")
+  answer = answer - 1
