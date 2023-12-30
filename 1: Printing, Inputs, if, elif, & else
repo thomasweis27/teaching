@@ -1,1 +1,30 @@
-print("Hello world!")
+#Hello, can you see this?
+print("Hello, my name is Thomas")
+print("Hello World")
+print("Hi I like soccer")
+
+#hashtag makes a comment
+#variable = "String"
+name = "Thomas"
+print("Hello, my name is", name)
+Subject = "Math"
+print("My favorite subject is", Subject)
+
+#birthday = input("What is your birthday? ")
+#print("You said", birthday)
+
+#Subject = input("What is your favorite subject? ")
+#print("Your favotrite subject is", Subject)
+
+if name == "Thomas":
+  print("You are the instructor.")
+else:
+  print("You are the student.")
+
+age = 7
+if age < 10:
+  print("You are a child.")
+elif age < 18:
+  print("You are a teenager.")
+else:
+  print("You are an adult")
