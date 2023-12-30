@@ -1,0 +1,37 @@
+class Dog:
+  def __init__(self, color, weight, breed, name):
+      self.color = color
+      self.weight = weight
+      self.breed = breed
+      self.name = name
+
+  
+  def getColor(self):
+      return self.color
+
+  def getWeight(self):
+      return self.weight
+
+  def getBreed(self):
+      return self.breed
+
+  def bark(self):
+      print("{} is happy and says Woof!".format(self.name))
+  def sniff(self):
+      print("{} is sniffing around".format(self.name))
+#_______________________________________________________________
+def main():
+  Charlie = Dog("yellow", "large", "yellow lab", "Charlie")
+  Desi = Dog("brown", "medium", "mix", "Desi")
+
+  print(Charlie.getBreed())
+  print(Charlie.getColor())
+  print(Desi.getBreed())
+  print(Desi.getColor())
+
+  Charlie.bark()
+  Desi.sniff()
+
+
+  #_________________________________________________________________________
+main()                                                                               
