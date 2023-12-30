@@ -1,0 +1,60 @@
+"""
+Steps:
+1. Make a 7 by 6 board
+2. Get a user input of where we want to put a thingy
+3. Put the piece where it goes
+4. repeat until winner!
+"""
+
+# - Defining the rows.
+rowA = ["-", "-", "-", "-", "-", "-", "-", "-"]
+rowB = ["-", "-", "-", "-", "-", "-", "-", "-"]
+rowC = ["-", "-", "-", "-", "-", "-", "-", "-"]
+rowD = ["-", "-", "-", "-", "-", "-", "-", "-"]
+rowE = ["-", "-", "-", "-", "-", "-", "-", "-"]
+rowF = ["-", "-", "-", "-", "-", "-", "-", "-"]
+numberRow = ["1", "2", "3", "4", "5", "6", "7", "8"]
+
+#___________________________________________________
+# - Printing the board.
+def theBoard():
+  print("\033c")
+  print("This is the current state of the board.")
+  print(numberRow)
+  print(rowA)
+  print(rowB)
+  print(rowC)
+  print(rowD)
+  print(rowE)
+  print(rowF)
+  
+#___________________________________________________
+# - Getting the user input
+def oneMove(playerSymbol):
+  move = int(input("Which column do you want to place your piece (it will fall)\nEG: 1, 2 ... 8: "))
+  if rowF[move - 1] != "-":
+    if rowE[move - 1] != "-":
+      if rowD[move - 1] != "-":
+        if rowC[move - 1] != "-":
+          if rowB[move - 1] != "-":
+            if rowA[move - 1] != "-":
+              print("This column is now full.")
+            else:
+              rowA[move-1] = playerSymbol
+          else:
+            rowB[move-1] = playerSymbol
+        else:
+          rowC[move-1] = playerSymbol
+      else:
+        rowD[move-1] = playerSymbol
+    else:
+      rowE[move-1] = playerSymbol
+  else:
+    rowF[move-1] = playerSymbol
+    
+#___________________________________________________
+while True:
+  theBoard()
+  oneMove("x")
+  theBoard()
+  oneMove("y")
