@@ -1,0 +1,8 @@
+letters = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+word = input("Enter a word: ")
+shiftAmount = 7
+
+for j in range(len(word)):
+  for i in range (26):
+    if word[j] == letters[i]:
+      print(word[j+shiftAmount])   
