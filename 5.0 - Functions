@@ -1,0 +1,19 @@
+def ikeaHello():
+  print("Welcome to Ikea!")
+
+#==========================================
+def whatTime(time):
+  print("The time is", time)
+
+#==========================================
+def needHelp():
+  y = "hello"
+  x = input("What do you need help with? ")
+  return x, y
+#==========================================
+
+time = "10:30"
+ikeaHello()
+whatTime(time)
+x, fiendlyGreeting = needHelp()
+print("you want to", x)
