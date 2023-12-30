@@ -1,0 +1,19 @@
+listShopping = ["Fruit", "Cheese", "Dessert"]
+print(listShopping[1])
+
+sentence= "I walked to the park."
+print(sentence[:8])
+print(sentence[8:16])
+
+example1 = "The sky is blue and cloudy. What color is the sky?"
+#answer = The sky is blue
+print(example1[:15])
+
+example2 = "My name is Thomas."
+word = "not"
+#My name is not Thomas.
+print(example2[:10], word, example2[11:])
+
+example3 = "Python, German, French, and Java are languages."
+#plese list the programming languages (Python and Java)
+print(example3[:6], example3[24:33])
