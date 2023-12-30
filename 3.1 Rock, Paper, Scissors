@@ -1,0 +1,31 @@
+#the "random" was done by me, the rest was done during class with a student.
+
+"""
+1. get the human to chose rock, paper, or scissors
+2. get the computer to chose rock, paper, or scissors
+3. compare answers and see who wins
+"""
+import random
+#modual called random that we can then use to have the computer chose a random number or string in a list
+
+user= input("Rock, Paper, or Scissors? ")
+list1=["Rock", "Paper", "Scissors"]
+computer= random.choice(list1)
+print(computer)
+
+if user==computer:
+  print("It's a tie!")
+elif user=="Rock" and computer == "Scissors":
+  print("You win!")
+elif user=="Paper" and computer == "Rock":
+  print("You win!")
+elif user=="Scissors" and computer == "Paper":
+  print("You win!")
+elif user=="Rock" and computer == "Paper":
+  print("You lost.")
+elif user=="Paper" and computer == "Scissors":
+  print("You lost.")
+elif user=="Scissors" and computer == "Rock":
+  print("You lost.")
+else:
+  print("Please select one of the options.")
