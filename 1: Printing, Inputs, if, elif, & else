@@ -1,4 +1,3 @@
-#Hello, can you see this?
 print("Hello, my name is Thomas")
 print("Hello World")
 print("Hi I like soccer")
@@ -10,12 +9,14 @@ print("Hello, my name is", name)
 Subject = "Math"
 print("My favorite subject is", Subject)
 
-#birthday = input("What is your birthday? ")
-#print("You said", birthday)
+#________________________________________________________
+birthday = input("What is your birthday? ")
+print("You said", birthday)
 
-#Subject = input("What is your favorite subject? ")
-#print("Your favotrite subject is", Subject)
+Subject = input("What is your favorite subject? ")
+print("Your favotrite subject is", Subject)
 
+#________________________________________________________
 if name == "Thomas":
   print("You are the instructor.")
 else:
