@@ -1,0 +1,9 @@
+#similar to the previous project, just orders the letters instead of shifting them
+
+letters = "abcdefghijklmnopqrstuvwxyz"
+word =  input ("What letters do you want? ")
+
+for i in range(26):
+  for x in range(len(word)):
+    if letters[i] in word[x]:
+      print(word[x])
