@@ -1,0 +1,52 @@
+#You are setting up a car show. You want data of different cars at this show. 
+#Be sure to include functions about what the cars would be able to do at this show. 
+
+
+class Car:
+    def __init__(self, color, brand, release, owner):
+      self.color = color
+      self.brand = brand
+      self.release = release
+      self.owner = owner
+      #engine
+      #gas or eletric
+
+    def getcolor(self):
+      return self.color
+
+    def getbrand(self):
+      return self.brand
+
+    def getrelease(self):
+      return self.release
+
+    def getowner(self):
+      return self.owner
+
+   
+    #functions the car can do.
+    def firstprize(self):
+      print("{} is the first prize".format(self.owner))
+
+    #race
+    #drive
+    #display
+    
+
+#_______________________________________________________________
+JamesJeep = Car("black", "Jeep", "1982", "James")
+thomasVan = Car("black", "Toyota", "2015", "Thomas")
+thomasCar = Car("black", "Subaru", "2020", "Thomas")
+#add a few more cars?
+
+#run the functions
+print(JamesJeep.getcolor())
+print(JamesJeep.getbrand())
+print(JamesJeep.getrelease())
+print(JamesJeep.getowner())
+
+JamesJeep.firstprize()
+
+#try and check in the cars when they get to the race
+# or/and
+# have a loop that you can run that assigns prizes in the termainal
