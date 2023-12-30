@@ -1,4 +1,4 @@
-def ikeaHello():
+Python Classesdef ikeaHello():
   print("Welcome to Ikea!")
 
 #==========================================
