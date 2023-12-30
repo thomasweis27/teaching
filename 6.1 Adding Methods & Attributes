@@ -1,0 +1,67 @@
+class Dog:
+  def __init__(self, color, weight, breed, name, favFood):
+    self.color = color
+    self.weight = weight
+    self.breed = breed
+    self.name = name
+    self.favFood = favFood
+
+  #getters (attributes) - this defines what the dog is
+  def getColor(self):
+      return self.color
+
+  def getWeight(self):
+      return self.weight
+
+  def getBreed(self):
+      return self.breed
+
+  #setters (methods) - doing domething with class
+  def bark(self):
+      print("{} is happy and says Woof!".format(self.name))
+  
+  def sniff(self):
+      print("{} is sniffing around".format(self.name))
+
+  def eat(self):
+    print("{} is eating ".format(self.name) + self.favFood)
+    self.weight += 2
+    print("{} is now {}lbs.".format(self.name, self.weight))
+
+  def walkDog(self):
+    print("You walk with {}.\n{} loses weight from the exercise.".format(self.name, self.name))
+  
+    self.weight -= 2
+    print("{} is now {}".format(self.name, self.weight))
+#_______________________________________________________________
+def main():
+  Cooper = Dog("yellow", 20.5, "yellow lab", "Cooper", "kibble")
+  Mollie = Dog("black and white", 12.5, "mix", "Mollie", "everything!!!")
+  
+  print(Cooper.getColor())
+  print(Mollie.getColor())
+  
+  Cooper.bark()
+  Mollie.sniff()
+  while True:
+    q0 = input("Would you like to begin the dog simulation? (Y/n)")
+    if q0 == "Y":
+      q1 = input("Which dog would you like to interact with? ")
+      if type(eval(q1)) == Dog:
+        q2 = input("Would you like to feed {}? (Y/n) ".format(q1))
+        if q2 == "Y":
+          eval(q1).eat()
+        else:
+          q3 = input("Would you like to walk {}? (Y/n) ".format(q1))
+          if q3 == "Y":
+            eval(q1).walkDog()
+      print("Dog health check:")
+      if eval(q1).weight() <= 0 or eval(q1).weight() >= 50.0:
+        print("{} is unhealthy.".format(q1))
+      else:
+        print("{} is in top shape.".format(q1))
+    else:
+      break
+    
+#____________________________________________________________
+main()
