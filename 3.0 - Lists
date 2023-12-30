@@ -1,0 +1,33 @@
+shoppingList = ["milk", "bread", "eggs"]
+shoppingList.append("mushrooms")
+shoppingList.remove("bread")
+print(shoppingList)
+
+print(shoppingList[2])
+
+#_________________________________________
+fruitList = ["mango", "blueberries", "guava"]
+fruitList.append("strawberries")
+fruitList.remove("blueberries")
+print(fruitList)
+print(fruitList[1])
+
+#challenge problems
+list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+#Mike Emma Kelly Brad
+print(list1[0], list1[2], list1[3], list1[5] )
+# "+" = no space between items
+# "," = spaces between items
+
+greeting = ["Hello", "Goodbye"]
+person = ["Sir", "Ma'am"]
+print(greeting[0], person[0])
+print(greeting[0], person[1])
+print(greeting[1], person[0])
+print(greeting[1], person[1])
+
+
+numbers = [5, 20, 15, 20, 25, 50, 20]
+#take the numbers and square them
+for i in range(6):
+  print(numbers[i]*numbers[i])
