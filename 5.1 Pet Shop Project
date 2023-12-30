@@ -1,0 +1,32 @@
+#this project was made in a lesson in colaboration with one of my students
+
+#pet shop - have list of pet and stock
+pets = {"dogs" : 13, "cats" : 8, "rabbit" : 35}
+
+#owner can change ## of pets
+while True:
+  menu = int(input("\033c1. Change number of pets\n2. Add a new pet\n3. Display current pets\n"))
+
+  #add pets to the list 
+  if menu == 1:
+    print("\033cYou currently have the following:", pets)
+    update = input("Which pet would you like to update?")
+    updatedNumber = int(input("What is the updated stock?"))
+    pets[update] = updatedNumber
+    if updatedNumber <= 0:
+      print("Invalid number!")
+    print("You currently have", pets)
+    
+  elif menu == 2:
+    print("\033cYou currently have the following:", pets)
+    newPet = input("What pet do you want to add? ")
+    newNumber = int(input("What is the stock of this pet?"))
+    pets[newPet] = newNumber
+      if newNumber <= 0:
+        print("Invalid number!")
+    print("You currently have", pets)
+  elif menu == 3:
+    print(pets)
+    
+  else:
+    print("Please pick a menu option.")
