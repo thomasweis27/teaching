@@ -1,0 +1,122 @@
+"""
+Steps:
+1. chose x/o, player one/two
+2. create a board
+3. place marks on board
+4. check to see if theres a winner
+"""
+
+player1 = input("Enter the first player's name: ")
+player2 = input("Enter the second player's name: ")
+
+player1Symbol = input("Which symbol would you like to have: \n'x' or 'o' \n")
+player2Symbol = ""
+if player1Symbol == "x":
+  player2Symbol = "o"
+elif player1Symbol == "o":
+  player2Symbol = "x"
+else:
+  print("Not an option")
+
+row1 = ["-", "-", "-"]
+row2 = ["-", "-", "-"]
+row3 = ["-", "-", "-"]
+
+#____________________________________________________
+#functions:
+def updateScreen():
+  print("\033c")    
+  print(row1)
+  print(row2)
+  print(row3)
+  
+#____________________________________________________
+def turn(player, playerSymbol):
+  print(player, "Which row would you like: ")
+  turn1Row = int(input())
+  print(player, "Which column would you like: ")
+  turn1Column = int(input())
+
+  if turn1Row == 1:
+    if turn1Column == 1 and "-" == row1[0]:
+      row1[0] = playerSymbol
+    elif turn1Column == 2 and "-" == row1[1]:
+      row1[1] = playerSymbol
+    elif turn1Column == 3 and "-" == row1[2]:
+      row1[2] = playerSymbol
+    else:
+      print("That is not an option")
+      turn(player1, playerSymbol)
+      
+  elif turn1Row == 2:
+    if turn1Column == 1 and "-" == row2[0]:
+      row2[0] = playerSymbol
+    elif turn1Column == 2 and "-" == row2[1]:
+      row2[1] = playerSymbol
+    elif turn1Column == 3 and "-" == row2[2]:
+      row2[2] = playerSymbol
+    else:
+      print("That is not an option")
+      turn(player1, playerSymbol)
+      
+  elif turn1Row == 3:
+    if turn1Column == 1 and "-" == row3[0]:
+      row3[0] = playerSymbol
+    elif turn1Column == 2 and "-" == row3[1]:
+      row3[1] = playerSymbol
+    elif turn1Column == 3 and "-" == row3[2]:
+      row3[2] = playerSymbol
+    else:
+      print("That is not an option")
+      turn(player1, playerSymbol)
+
+#____________________________________________________
+def win():
+  #checks the rows to see if there is a winner
+  if row3[0] == row3[1] and row3[0] == row3[2] and row3[0] != "-":
+    return True
+  elif row2[0] == row2[1] and row2[0] == row2[2] and row2[0] != "-":
+    return True
+  elif row1[0] == row1[1] and row1[0] == row1[2] and row1[0] != "-":
+    return True
+  #checks the columns to see if there is a winner
+  if row1[0] == row2[0] and row1[0] == row3[0] and row1[0] != "-":
+    return True
+  elif row1[1] == row2[1] and row1[1] == row3[1] and row1[1] != "-":
+    return True
+  elif row1[2] == row2[2] and row1[2] == row3[2] and row1[2] != "-":
+    return True
+  #checks the diagnals to see if there is a winner
+  if row1[0] == row2[1] and row1[0] == row3[2] and row1[0] != "-":
+    return True
+  elif row1[2] == row2[1] and row1[2] == row3[0] and row1[2] != "-":
+    return True
+    
+#____________________________________________________
+#runs the game and switches between players
+oneOrTwo = 1
+yesOrNo = False
+while True:
+  if oneOrTwo == 1:
+    turn(player1, player1Symbol)
+    updateScreen()
+
+    #checks to see if there is a winner
+    yesOrNo = win()
+    if yesOrNo == True:
+      print(player1, "Wins!!!")
+      break
+    else:
+      oneOrTwo = 2
+    
+  if oneOrTwo == 2:
+    turn(player2, player2Symbol)
+    updateScreen()
+
+    #checks to see if there is a winner
+    yesOrNo = win()
+    if yesOrNo == True:
+      print(player2, "Wins!!!")
+      break
+    else:
+      oneOrTwo = 1
