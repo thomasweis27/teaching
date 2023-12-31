@@ -1,1 +1,68 @@
-print("Hello World")
+import pygame, sys
+
+# First thing in any pygame program - initializes pygame
+pygame.init()
+
+# set up variables for the screen size in pixels
+size = width, height = 600, 400
+# initialize a window with the screen size you set
+screen = pygame.display.set_mode(size)
+
+# create a clock, which will be used to control the program's frame rate
+clock = pygame.time.Clock()
+
+# create variables to store location and size of a rectangle
+shape_position = (width / 4, height / 4)
+shape_size = (200, 100)
+# creates the rectangle:
+shape_rect = pygame.Rect(shape_position, shape_size)
+
+# RGB colors of the shapes to draw
+shape_color = (200, 0, 0)
+line_color = (51, 116, 48)
+circle_color = (0, 100, 100)
+
+# Circle
+circle_pos = (50,50)
+
+while True:
+    # tick forward at 60 frames per second
+    clock.tick(60)
+    
+    # This for loop gets any keyboard, mouse, or other user input events
+    for event in pygame.event.get():
+        # The quits pyGame when closing the game window.
+        if event.type == pygame.QUIT:
+            sys.exit()
+        # senses when the user clicks any mouse button
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            # determines mouse button clicked
+            if event.button == pygame.BUTTON_LEFT:
+                shape_rect.center = event.pos
+            elif event.button == pygame.BUTTON_RIGHT:
+                circle_pos = event.pos
+
+        if event.type == pygame.KEYDOWN:
+             #detects if a key is pressed
+          if event.key == pygame.K_SPACE:
+            #if spacebar is pressed, rotate colors between shapes
+            shape_color_original = shape_color
+            shape_color = circle_color
+            circle_color = line_color
+            line_color = shape_color_original
+
+    # Fill the screen with a solid color
+    screen.fill((50,50,100))
+    pygame.draw.line(screen, line_color, circle_pos, shape_rect.center, 4)
+  
+    # Fill a rectangular area with the shape color. This is the fastest way to draw rectangles to the screen.
+    screen.fill(shape_color, rect=shape_rect)
+
+    # If you need more complex shapes or lines use pygame.draw.
+
+    # Draws a circle w/ given surface, color, position, and radius.
+    pygame.draw.circle(screen, circle_color, circle_pos, 25)
+
+    
+    # At the end of each game loop, call pygame.display.flip() to update the screen with what you drew.
+    pygame.display.flip()
