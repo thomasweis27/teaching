@@ -1,0 +1,72 @@
+#make boards
+#place the ships
+#make system so u can pick number
+#have other player pick a number
+#notifications when u hit a ship or not
+#Make it so the computer remembers what places you have gone
+
+#1 two bocks
+#2 one blocks
+
+row1 = ["-", "-", "-", "-", "-"]
+row2 = ["-", "-", "-", "-", "-"]
+row3 = ["-", "-", "-", "-", "-"]
+row4 = ["-", "-", "-", "-", "-"]
+row5 = ["-", "-", "-", "-", "-"]
+
+print (row1)
+print (row2)
+print (row3)
+print (row4)
+print (row5)
+
+
+
+for i in range(3): 
+  column = int(input ("What column do you want to choose kid?"))
+  row = int(input ("What row do you want to choose kid?"))
+
+  if row == 1:
+    row1[column-1] = "x"
+  elif row == 2:
+    row2[column-1] = "x"
+  elif row == 3:
+    row3[column-1] = "x"
+  elif row == 4:
+    row4[column-1] = "x"
+  elif row == 5:
+   row5[column-1] = "x"
+   
+
+
+  print (row1)
+  print (row2)
+  print (row3)
+  print (row4)
+  print (row5)
+  print (row5)
+
+import random
+
+rows = ["1","2", "3", "4","5"]
+columns = ["1","2", "3", "4","5"]
+computerRow1 = random.choice(rows)
+computerColumn1 = random.choice(columns)
+computerRow2 = random.choice(rows)
+computerColumn2 = random.choice(columns)
+computerRow3 = random.choice(rows)
+computerColumn3 = random.choice(columns)
+
+print(computerRow1, computerColumn1)
+while True:
+  columns = input ("What column do you want to choose kid?")
+  rows = input ("What row do you want to choose kid?")
+  if computerRow1 == rows and columns == computerColumn1:
+    print("You hit a ship. NOW GO BACK TO SHOOTING KID")
+  elif computerRow2 == rows and columns == computerColumn2:
+    print("You hit a ship. NOW GO BACK TO SHOOTING KID")
+  elif computerRow3 == rows and columns == computerColumn3:
+    print("You hit a ship. NOW GO BACK TO SHOOTING KID")
+  else:
+    print("LMAO MISSED")  
+  
