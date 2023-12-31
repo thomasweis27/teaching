@@ -1,0 +1,35 @@
+#This works in tandom with a txt doc called "word.txt". This stores a 
+#    word in a different doc so the guesser can not just look at the 
+#    program code to know what to guess.
+
+with open("word.txt", "r") as text:
+  for line in text:
+    word = line
+"""
+1. Have a word to be guessed
+2. ask the player for letters
+3. check to see if the letter is in the word
+4. try to guess a word in the determined number of guessed
+"""
+guessed = ""
+for letter in word:
+  guessed = guessed + "-"
+  
+
+count = 0
+while True:
+  print("You have made", count, " guesses out of 20 total guesses.")
+  letter = input("Guess a letter: ")
+  count += 1
+  for x in range(len(word)):
+    if letter == word[x]:
+      guessed = guessed[:x] + letter + guessed[x + 1:]
+
+
+  print(guessed)
+  if guessed == word:
+    print("Nice, you guessed them all correct!")
+    break
+  elif count == 20:
+    print("Sorry, you incorrectly guessed too many!")
+    break
