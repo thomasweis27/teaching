@@ -1,0 +1,26 @@
+"""
+Regular numbers: 0-9
+Binary numbers: 0 & 1
+  This repersents off (0) and on (1) starts within the computer hardware.
+
+A number starts on the right and doubles each number to the right.
+1111 --> 8+4+2+1 = 15
+1000 --> 8+0+0+0 = 8
+0010 --> 0+0+2+0 = 2
+
+Lets make a program that will do this for us, instead of having to do this by hand.
+"""
+
+def dec_to_binary(base10number):
+  binaryNumber = ""
+  while base10number > 0:
+    remainder = base10number % 2
+    binaryNumber = str(remainder) + binaryNumber  # add the remaining to the front
+    base10number //= 2  # Integer division to shift right
+    #print(binaryNumber)
+  return binaryNumber
+
+#____________________________________________
+base10number = 230
+binaryNumber = dec_to_binary(base10number)
+print(base10number, "in binary is:", binaryNumber)
