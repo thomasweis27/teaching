@@ -1,0 +1,16 @@
+#chr() and ord() commands taken from W3Schools
+
+def asciiToText(asciiCodes):
+  text = ""
+  for code in asciiCodes:
+    text += chr(code) #chr returns numbers
+  return text
+
+def textToAscii(text):
+  asciiCodes = []
+  for char in text:
+    asciiCodes.append(ord(char)) #ord returns letters
+  return asciiCodes
+
+print(textToAscii("Hi, Wyatt."))
+print(asciiToText([84, 104, 111, 109, 97, 115, 32, 87, 46]))
