@@ -1,0 +1,37 @@
+*Inital terms in iD Tech lesson. Definitions were created from a variety of online searches and refined with the aid of student's clarifying questions. 
+
+Machine Learning:
+➼ Programs that learn and improve at tasks finding & using statistics.
+➼ Models are built with adjustable parameters to figure out the results.
+➼ Trained by 'feeding data', then comparing results to expected outcomes, and adjusting parameters.
+
+Types of Tasks:
+➼ Supervised learning: Tasks with labeled data or rewards to guide learning.
+➼ Unsupervised learning: Model infers patterns and features in data independently.
+➼ Classification: Separating inputs into groups.
+
+How Models Learn:
+➼ Data is fed into the model.
+➼ Model's parameters process the data and return an answer.
+➼ Model's guess is compared to the expected outcome.
+➼ Parameters are adjusted towards the expected outcome.
+➼ Process repeats with new data until model is optimized.
+
+Model Structure:
+➼ Simple models: Single variable.
+➼ Complex models: Networks of thousands of 'neurons' (see below).
+➼ More parameters = Can tackle more challengeing tasks, but uses more processing time.
+
+Data and Classification:
+➼ Features: Basic information underlying data points, used for classification.
+➼ Labels: Data points assigned to specific classes.
+➼ Loss: A measure of how often the model is wrong.
+
+Neural Networks:
+➼ Layers of neurons that process and analyze data.
+➼ Neurons split data linearly, with weights determining their influence.
+➼ More neurons can reduce loss but increase processing time.
+➼ Layers can create more complex models with fewer neurons.
+
+Goal:
+➼ Create models with low loss (high accuracy) using as few neurons as possible.
