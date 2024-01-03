@@ -1,0 +1,32 @@
+#closing one window will then show the next graph
+
+import matplotlib.pyplot as plot
+import numpy as np
+
+#graph a basic function
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 9, 16, 25]
+
+#plot.plot(x, y) #line
+plot.plot(x, y, "ro") #dots
+plot.show()
+
+#_________________________________________
+
+def squareValues(x):
+  return x*x
+
+numbers = []
+
+#without numpy
+for i in range(100):
+  output = squareValues(i)
+  numbers.append(output)
+
+#using numpy
+numbers = np.arange(100)
+plot.plot(squareValues(numbers))
+
+print(numbers)
+plot.plot(numbers)
+plot.show()
