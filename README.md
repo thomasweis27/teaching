@@ -7,4 +7,4 @@ More advanced students can explore some "Machine Learning and AI" concepts.
 
 
 
-*Note: many elements of code were created in classes with colaboration of students under the age of 18.*
+*Note: many elements of code were created in classes with colaboration of students under the age of 18. All PII is removed for anonymity. Other sources used (websites, etc.) are notated within the corresponding document.*
