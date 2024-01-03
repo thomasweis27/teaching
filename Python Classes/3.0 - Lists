@@ -1,9 +1,14 @@
-shoppingList = ["milk", "bread", "eggs"]
-shoppingList.append("mushrooms")
-shoppingList.remove("bread")
+shoppingList = ["milk", "bread", "eggs", "apples", "bannana"]
+shoppingList.append("mushrooms") #add to the end of a list
+shoppingList.insert(0, "cheese") #add in a specific place
+shoppingList.remove("bread") #remove a specific item
+shoppingList.pop() #removes the last item in the list
+shoppingList.pop(2) #removes the item in position in the list
+print(shoppingList)
+shoppingList.sort() #alphabetizes the list
 print(shoppingList)
 
-print(shoppingList[2])
+print(shoppingList[3])
 
 #_________________________________________
 fruitList = ["mango", "blueberries", "guava"]
