@@ -4,3 +4,7 @@ Following this, I give them choises. If they are insteresting in some games/grap
 Else, we can work on Project Euler problems (math challenges) or CodeWars challenges (general programming skills).
 
 More advanced students can explore some "Machine Learning and AI" concepts. 
+
+
+
+*Note: many elements of code were created in classes with colaboration of students under the age of 18.*
