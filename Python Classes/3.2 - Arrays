@@ -1,0 +1,18 @@
+"""
+Arrays: Can only store elements of the same data type (e.g., all integers, all floats).
+  Generally more memory-efficient, storing elements in contiguous memory blocks.
+  Ideal for numerical computations, large datasets, scientific computing, or data analysis.
+  
+Lists: Can store elements of different data types (e.g., numbers, strings, objects).
+  More versatile, stores mixed data types, non-numerical operations.
+"""
+
+import numpy as np #arrays are not built-in so we need to import them
+
+numbersArray = np.array([1, 2, 3, 4, 5, 6])
+print(numbersArray)
+print(numbersArray.shape) #shows the size of the array
+
+two_D_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(two_D_array)
+print(two_D_array.shape)
