@@ -1,0 +1,77 @@
+import tkinter as tk
+
+def show_message():
+    customizeMenu.deiconify()
+    menuScreen.withdraw()
+
+def show_gameWindow():
+    gameWindow.deiconify()
+    menuScreen.withdraw()
+
+def getValue():
+    print(colorChoice.get())
+
+def return_to_menu():
+    customizeMenu.withdraw()
+    gameWindow.withdraw()
+    menuScreen.deiconify()
+
+menuScreen = tk.Tk()
+menuScreen.title("Menu")
+menuScreen.geometry("400x200")
+
+label = tk.Label(menuScreen, text="\nSnake\n")
+label.pack()
+
+button_play_game = tk.Button(menuScreen, text="Play Game", command=show_gameWindow)
+button_play_game.pack()
+
+button_customize = tk.Button(menuScreen, text="Customize", command=show_message)
+button_customize.pack()
+
+
+customizeMenu = tk.Toplevel(menuScreen)
+customizeMenu.title("Customize Menu")
+customizeMenu.geometry("400x200")
+customizeMenu.withdraw()  # Hide the window initially
+
+gameWindow = tk.Toplevel(menuScreen)
+gameWindow.title("Game Window")
+gameWindow.geometry("400x200")
+gameWindow.withdraw()
+
+label_color = tk.Label(customizeMenu, text="Please pick a color: ")
+label_color.pack()
+
+label_color = tk.Label(gameWindow, text="This is where the game can go.")
+label_color.pack()
+
+colorChoice = tk.StringVar()
+colorChoiceEntry = tk.Entry(customizeMenu, textvariable=colorChoice)
+colorChoiceEntry.pack()
+
+button_submit = tk.Button(customizeMenu, text="Submit", command=getValue)
+button_submit.pack()
+
+#Checkbutton
+check_var1 = tk.BooleanVar()
+check_var2 = tk.BooleanVar()
+checkbutton1 = tk.Checkbutton(customizeMenu, text="Check for music", variable=check_var1)
+checkbutton2 = tk.Checkbutton(customizeMenu, text="Check for sound effects", variable=check_var2)
+checkbutton1.pack()
+checkbutton2.pack()
+
+label_color = tk.Label(customizeMenu, text="\n\n")
+label_color.pack()
+label_color = tk.Label(gameWindow, text="\n\n\n\n\n\n\n")
+label_color.pack()
+
+button_return = tk.Button(customizeMenu, text="Return", command=return_to_menu)
+button_return.pack()
+
+button_return = tk.Button(gameWindow, text="Return", command=return_to_menu)
+button_return.pack()
+
+
+
+menuScreen.mainloop()
