@@ -1,6 +1,14 @@
 #for loop - known number of time
 teacher = "Thomas"
 
+#challenges
+#start counting at 1 instead of 0
+#start counting at 10 and go to 20
+#go from -10 to 0
+#go from 10 to 0
+#skip cound by 2s
+#give me all the odd numbers from 1 - 20
+
 for i in range(10):
   print("Hello Anna")
 
