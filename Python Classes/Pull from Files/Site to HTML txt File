@@ -1,0 +1,14 @@
+#created from the Site to HTML file
+from urllib.request import urlopen
+
+# Open the URL and read the data
+data = urlopen("https://en.wikipedia.org/wiki/Cars_(film)")
+
+# Create a text file to store the data
+with open("cars_wiki.txt", "w") as file:
+    for line in data:
+        # Decode the bytes to text and write to the file
+        decoded_line = line.decode("utf-8")  # Decode bytes to text
+        file.write(decoded_line)
+
+print("Data written to cars_wiki.txt successfully!")
