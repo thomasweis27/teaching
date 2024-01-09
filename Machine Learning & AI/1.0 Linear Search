@@ -14,3 +14,10 @@ ToDo:
   quick sort
   heap sort
   counting sort
+
+Other ideas: (taken from wittenberg Comp 275 class)
+data types: stack, queue, union–find
+sorting: insertion sort, quicksort, mergesort, priority queue
+searching: BST, red–black tree, hash table, k-d tree
+graphs: BFS, DFS, Prim, Kruskal, Dijkstra
+Advanced: randomness, multiplicative weights, intractability
