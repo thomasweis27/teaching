@@ -1,0 +1,6 @@
+#this information was taken from https://stackoverflow.com/questions/1393324/given-a-url-to-a-text-file-what-is-the-simplest-way-to-read-the-contents-of-the and modified to fit our needs
+
+from urllib.request import urlopen
+data = urlopen("https://en.wikipedia.org/wiki/Cars_(film)")
+for line in data:
+  print(line)
