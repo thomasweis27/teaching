@@ -6,7 +6,7 @@
 3. compare answers and see who wins
 """
 import random
-#modual called random that we can then use to have the computer chose a random number or string in a list
+#modual called random that we can then use to have the computer choose a random number or string in a list
 
 user= input("Rock, Paper, or Scissors? ")
 list1=["Rock", "Paper", "Scissors"]
