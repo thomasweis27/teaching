@@ -1,3 +1,5 @@
+*Only the Python Classes Folder is really full with anything. More will be updated soon.*
+
 Hi there! Usually with beginners I start with the contents of the 'Python Classes' folder. There's a lot of good topics here but there are also some folders at I've done in classes but not necessarly help with understanding a specific topic.
 
 Following this, I give them choises. If they are insteresting in some games/graphics, there is the pyGame folder. 
