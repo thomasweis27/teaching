@@ -1,6 +1,10 @@
 listShopping = ["Fruit", "Cheese", "Dessert"]
 print(listShopping[1])
 
+#an index is a number value that stores something
+#with strings, that something is a letter
+#indexing involves using [] to specify a number range to print/use
+
 sentence= "I walked to the park."
 print(sentence[:8])
 print(sentence[8:16])
