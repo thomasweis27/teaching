@@ -5,6 +5,10 @@ sentence= "I walked to the park."
 print(sentence[:8])
 print(sentence[8:16])
 
+sentence = "I eat apples everyday"
+#try just printing one word "everyday"
+print(sentence[])
+
 example1 = "The sky is blue and cloudy. What color is the sky?"
 #answer = The sky is blue
 print(example1[:15])
