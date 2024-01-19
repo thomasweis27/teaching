@@ -17,6 +17,14 @@ fruitList.remove("blueberries")
 print(fruitList)
 print(fruitList[1])
 
+#take this list and change it, for if you had a snow day!!
+List = ["wake up", "brush teeth", "eat breakfast", "go to school"]
+print(List)
+List.remove("go to school")
+List.append("go sleding")
+print(List)
+print(List[2])
+
 #challenge problems
 list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
 #Mike Emma Kelly Brad
