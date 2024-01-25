@@ -1,6 +1,6 @@
 """
 Steps:
-1. chose x/o, player one/two
+1. choose x/o, player one/two
 2. create a board
 3. place marks on board
 4. check to see if theres a winner
