@@ -1,0 +1,49 @@
+CIA Triad: Confidentiality, Integrity, and Availability - The core data security requirements.
+Least Privilege: Granting users minimum access needed for their tasks.
+Patch Management: Regularly applying software updates to fix vulnerabilities.
+Multi-Factor Authentication: Adding an extra security layer beyond passwords.
+Firewalls: Filtering network traffic to block unauthorized access.
+Backups: Regularly copying data to prevent data loss.
+Phishing: Deceptive attempts to steal information or hijack accounts.
+Malware: Malicious software that harms devices or steals data.
+Antivirus/Anti-malware: Software that detects and removes malware.
+Encryption: Scrambling data to make it unreadable without a key.
+Secure Coding Practices: Writing code resistant to vulnerabilities.
+Incident Response: Plan for responding to security breaches.
+Access Control: Controlling who can access systems and data.
+Data Security: Protecting data from unauthorized access, use, etc.
+Network Security: Protecting networks from unauthorized access, attacks, and disruptions.
+Cloud Security: Protecting data and systems in the cloud environment.
+Mobile Security: Protecting mobile devices from threats.
+IoT Security: Protecting devices and systems in the Internet of Things (IoT) from vulnerabilities.
+OPSEC: Protecting information by managing activities and information that could reveal sensitive data.
+BCDR: Planning and procedures for continuing operations and recovering data after a disaster.
+Threat Intelligence: Gathering and analyzing information about threats to inform security decisions.
+Vulnerability Management: Identifying, classifying, and prioritizing vulnerabilities in systems and mitigating them.
+Risk Management: Identifying, assessing, and managing cybersecurity risks.
+Security Awareness and Training: Educating users about cybersecurity threats and best practices.
+Privacy: Protecting personal information from unauthorized collection, use, or disclosure.
+Compliance: Meeting legal and regulatory requirements for data security.
+Incident Response: Planning and procedures for responding to a security incident.
+Forensics: Investigating security incidents to gather evidence and identify the attacker.
+Penetration Testing: Simulating cyberattacks to identify vulnerabilities in systems.
+SIEM: A tool that collects and analyzes security-related data to detect and respond to threats.
+EDR: A tool that monitors endpoints for malicious activity and takes action to respond.
+Zero-Trust Security: A security model that assumes no one is trusted and requires strict verification for access.
+Social Engineering: Manipulating people to share information or take actions that compromise security.
+Supply Chain Security: Protecting organizations from threats introduced through their suppliers and dependencies.
+Data Loss Prevention (DLP): Preventing sensitive data from unauthorized disclosure or exfiltration.
+Security Automation: Using tools and techniques to automate security tasks and processes.
+Threat Modeling: Identifying and analyzing potential threats to systems and data.
+Cybersecurity Framework: A set of guidelines and best practices for managing cybersecurity risks.
+Incident Command System (ICS): A standardized approach for managing and responding to security incidents.
+Cybersecurity Hygiene: Basic practices like strong passwords, software updates, and backups to maintain good security posture.
+Risk Assessment: Identifying and analyzing vulnerabilities, threats, and potential impacts of security risks.
+Business Continuity Management (BCM): Planning and procedures for ensuring business operations continue during disruptions.
+Disaster Recovery (DR): Restoring IT systems and data after a disaster or outage.
+Incident Response Plan: A documented plan outlining steps to take in case of a security incident.
+Security Incident Classification: Ranking security incidents based on severity and risk.
+Endpoint Security: Protecting laptops, desktops, and mobile devices from threats.
+Web Application Security: Protecting web applications from vulnerabilities and attacks.
+Cryptography: The science of secure communication and data storage.
+Digital Forensics: Analyzing digital evidence to investigate and resolve security incidents.
