@@ -1,0 +1,5 @@
+#This is a project developed by iD Tech and is not something that I have any ownership of. 
+#Theirfore I will not be putting their classes in my personal github. It's an amazing lesson
+#that uses the camera to take pictures of rock, paper, or scissors (hand gesture) and then
+#trains a movdel to this. We then export the model and create a basic program to make the 
+#person play against the computer (computer choice random, photos of user uses ML from pictures.)
