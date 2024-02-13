@@ -3,9 +3,9 @@
 text = "Hello,\nThis is a file for Text to Txt.\nMy name is Thomas :-)"
 
 #"r" - read - reads the contents of the file
-with open("site.txt", "r") as file:
-  #for line in text:
-    print(text)
+with open("users.txt", "r") as file:
+    for line in file:
+        print(line)
 
 #"w" - write - create new/override text file
 with open("site.txt", "w") as file:
