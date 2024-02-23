@@ -1,0 +1,74 @@
+#Used the data from the following link to train an AI and then expanded on this, 
+#   by making the ML program take in info from another site and make a prediction. 
+#   https://www.kaggle.com/code/midouazerty/detecting-fake-news-step-by-step/input
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib
+import seaborn as sns
+import itertools
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import PassiveAggressiveClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+# Dataset loading and preprocessing
+plt.style.use("ggplot")
+sns.color_palette("tab10")
+sns.set(
+    context="notebook", style="darkgrid", font="sans-serif", font_scale=1, rc=None
+)
+matplotlib.rcParams["figure.figsize"] = [20, 8]
+matplotlib.rcParams.update({"font.size": 15})
+matplotlib.rcParams["font.family"] = "sans-serif"
+
+# Load fake news dataset (adjust path as needed)
+df = pd.read_csv("fake_or_real_news.csv")
+
+# Train-test split
+labels = df.label
+x_train, x_test, y_train, y_test = train_test_split(
+    df["text"], labels, test_size=0.2, random_state=7
+)
+
+# Feature extraction
+tfidf_vectorizer = TfidfVectorizer(stop_words="english", max_df=0.7)
+tfidf_train = tfidf_vectorizer.fit_transform(x_train)
+tfidf_test = tfidf_vectorizer.transform(x_test)
+
+# Train model
+pac = PassiveAggressiveClassifier(max_iter=1)
+pac.fit(tfidf_train, y_train)
+
+# Evaluate model performance
+y_predict = pac.predict(tfidf_test)
+score = accuracy_score(y_test, y_predict)
+print(f"Accuracy for the trained model: {round(score*100, 2)}%")
+confusion_matrix(y_test, y_predict, labels=["FAKE", "REAL"])
+
+# Process entered article
+url = "https://en.wikipedia.org/wiki/Horned_sungem" #input("Enter in a URL: ")
+html = urlopen(url).read()
+soup = BeautifulSoup(html, features="html.parser")
+text = soup.get_text()  # get all text from artical
+
+# Text cleaning and writing to file
+cleaned_text = text
+
+# Clean and filter text as needed
+# (could remove stop words, punctuation, HTML tags...)
+
+# Write cleaned text to file
+with open("cleaned_site.txt", "w", encoding="utf-8") as file:  # Use UTF-8 for wider character support
+    file.write(cleaned_text)
+
+# Create article DataFrame
+article_df = pd.DataFrame({"text": [cleaned_text], "label": ["UNKNOWN"]})
+
+# Predict label for article
+article_tfidf = tfidf_vectorizer.transform(article_df["text"])
+predicted_label = pac.predict(article_tfidf)[0]
+print(f"Prediction for the article: {predicted_label}")
