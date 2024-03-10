@@ -1,6 +1,5 @@
 from googlesearch import search
-#Here we are creating a function to get reliable sites and returns the top 5 results other than wikepedia or an exception which is when an error occurs
-print('please try to be specific with your input as the more specific you are the better the program can grasp whether the information is  fake news')
+print('please try to be specific with your input: ')
 def get_reliable_sites(topic):
     try:
         search_results = search(topic, num=10, stop=10, pause=2, lang='en')
