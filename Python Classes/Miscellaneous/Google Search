@@ -1,0 +1,22 @@
+from googlesearch import search
+#Here we are creating a function to get reliable sites and returns the top 5 results other than wikepedia or an exception which is when an error occurs
+print('please try to be specific with your input as the more specific you are the better the program can grasp whether the information is  fake news')
+def get_reliable_sites(topic):
+    try:
+        search_results = search(topic, num=10, stop=10, pause=2, lang='en')
+        filtered_results = [url for url in search_results if 'wikipedia.org' not in url]
+        return filtered_results[:1]  # Return the first 5 non-Wikipedia URLs
+    except Exception as e:
+        print("An error occurred:", e)
+        return []
+# If the name is in the main function and gets an input and finds these inputs
+user_topic = input("Enter a specific topic: ")
+urls = get_reliable_sites(user_topic)
+
+if urls:
+    print("\nTop 1 non-Wikipedia URLs for the topic '{}':\n".format(user_topic))
+    for index, url in enumerate(urls, start=1):
+            print(f"{index}. {url}")
+else:
+  print("No non-Wikipedia URLs found for the given topic.")
+#This is just to create spacing for the next part
