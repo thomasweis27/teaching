@@ -9,11 +9,24 @@ with open("users.txt", "r") as file:
 
 #"w" - write - create new/override text file
 with open("site.txt", "w") as file:
-  for line in text:
-    file.write(line)
+  file.write(line)
+  file.write("Hello, my name is max and this is my file")
+  file.write("This is the main file")
 
 additional_text = "\nHere is the additional information that I am going to append.\nHope this helps."
 
-#"a" - append - add to the end
-with open("site.txt", "a") as file:
-  file.write(additional_text + "\n")
+#ask for an input and store the answer in a answer.txt file
+#ask for another imput for their name, and add this to the files when they respond
+# this is the format: name, subject
+
+#variables lower case
+#classes upper case
+name = input("What is your name?")
+subject = input("What is your favorite subject?")
+with open("answer.txt", "a") as file:
+  file.write("\n" + subject + ", " + name)
+
+
+with open("answer.txt", "r") as file:
+  for line in file:
+    print(line)
